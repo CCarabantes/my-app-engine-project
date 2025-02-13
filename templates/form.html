@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Info Form</title>
+    <script>
+        function validateForm() {
+            let name = document.forms["userForm"]["name"].value;
+            let email = document.forms["userForm"]["email"].value;
+            let major = document.forms["userForm"]["major"].value;
+
+            if (name == "" || email == "" || major == "") {
+                alert("Name, Email, and Major are required fields.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Your Information</h1>
+    <form name="userForm" action="/" method="POST" onsubmit="return validateForm();">
+        <label>Name:</label> <input type="text" name="name"><br>
+        <label>Address:</label> <input type="text" name="address"><br>
+        <label>City:</label> <input type="text" name="city"><br>
+        <label>State:</label> <input type="text" name="state"><br>
+        <label>Zip:</label> <input type="text" name="zip"><br>
+        <label>Phone:</label> <input type="text" name="phone"><br>
+        <label>Email:</label> <input type="email" name="email"><br>
+        <label>Major:</label> <input type="text" name="major"><br>
+        <label>Career Goal:</label> <input type="text" name="career_goal"><br>
+        <label>Favorite Song:</label> <input type="text" name="favorite_song"><br>
+        <label>Favorite Band:</label> <input type="text" name="favorite_band"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
